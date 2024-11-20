@@ -5,6 +5,7 @@ using TechTalk.SpecFlow;
 using TestAutomation.Pages;
 using TestAutomation.TestData;
 using NUnit.Framework;
+using System.Xml.Linq;
 
 namespace TestAutomation.StepDefinitions
 {
@@ -33,7 +34,7 @@ namespace TestAutomation.StepDefinitions
         [Given(@"I launch my browser and go to the Forex Page")]
         public void GivenILaunchMyBrowserAndGoToTheForexPage()
         {
-            _landingPage.NavigateToURL(_driver);
+            _landingPage.NavigateToURL(_driver, forexData.forexURL);
         }
 
         [Given(@"The cookies are accepted")]

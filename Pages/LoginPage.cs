@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TestAutomation.TestData;
 using SeleniumExtras.WaitHelpers;
 using OpenQA.Selenium.Support.UI;
+using TestAutomation.Drivers;
 
 namespace TestAutomation.Pages
 {
@@ -23,6 +24,46 @@ namespace TestAutomation.Pages
         }
 
       
+        public LoginPage FindAndEnterEmailAddress(IWebDriver driver, string email)
+        {
+            driver.FindElement(By.Id(loginData.emailID)).SendKeys(email);
+            return this;
+        }
+
+        public IWebElement FindEmailError(IWebDriver driver)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            IWebElement errorMessage = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions
+                .ElementIsVisible(By.CssSelector("p.MuiFormHelperText-root.Mui-error.MuiFormHelperText-sizeMedium.MuiFormHelperText-contained.css-sbpyf7")));
+            return errorMessage;
+            //return driver.FindElement(By.ClassName(loginData.ErrorClassName));
+        }
+
+        public IList<IWebElement> FindPaswwordError(IWebDriver driver)
+        {
+            IList<IWebElement> errorMessages = driver.FindElements(By.CssSelector("p.MuiFormHelperText-root.Mui-error"));
+
+            // Check if any error messages were found
+            if (errorMessages.Count > 0)
+            {
+                Console.WriteLine("Error Messages Found:");
+
+                // Iterate through all error elements and print their text
+                foreach (IWebElement errorMessage in errorMessages)
+                {
+                    Console.WriteLine(errorMessage.Text);
+                }
+            }
+            return errorMessages;
+           // return driver.FindElements(By.ClassName(loginData.ErrorClassName));
+
+        }
+
+        public LoginPage FindAndEnterPassword(IWebDriver driver, string password)
+        {
+            driver.FindElement(By.Id(loginData.passwordID)).SendKeys(password);
+            return this;
+        }
 
     }
 }

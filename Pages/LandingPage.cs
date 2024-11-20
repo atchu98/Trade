@@ -18,9 +18,9 @@ namespace TestAutomation.Pages
             this._driver = driver;
         }
 
-        public LandingPage NavigateToURL(IWebDriver driver)
+        public LandingPage NavigateToURL(IWebDriver driver, string url)
         {
-            driver.Navigate().GoToUrl(ftData.forexURL);
+            driver.Navigate().GoToUrl(url);
             return this;
         }
 
@@ -31,6 +31,7 @@ namespace TestAutomation.Pages
             {
                 driver.FindElement(By.Id(lPData.cookiesacceptbuttonID)).Click();
             }
+            
 
             return this;
         }
@@ -39,6 +40,11 @@ namespace TestAutomation.Pages
         {
             return driver.Title;
 
+        }
+
+        public IWebElement LocateSignupButton(IWebDriver driver)
+        {
+            return driver.FindElement(By.LinkText("Sign up / Log in"));
         }
 
     }
