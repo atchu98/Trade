@@ -9,5 +9,7 @@ namespace TestAutomation.TestData
     public class LandingPageTestData
     {
         public string landingPage = "https://tradenation.com/en-gb/";
+
+        public string cookiesacceptbuttonID = "onetrust-accept-btn-handler";
     }
 }

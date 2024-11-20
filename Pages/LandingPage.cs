@@ -27,12 +27,18 @@ namespace TestAutomation.Pages
         public LandingPage CheckCoockiesAppearAndClickConfirm(IWebDriver driver)
         {
             Thread.Sleep(5000);
-            if(driver.FindElement(By.Id("onetrust-accept-btn-handler")).Displayed)
+            if(driver.FindElement(By.Id(lPData.cookiesacceptbuttonID)).Displayed)
             {
-                driver.FindElement(By.Id("onetrust-accept-btn-handler")).Click();
+                driver.FindElement(By.Id(lPData.cookiesacceptbuttonID)).Click();
             }
 
             return this;
+        }
+
+        public string  GetPageTitle(IWebDriver driver)
+        {
+            return driver.Title;
+
         }
 
     }

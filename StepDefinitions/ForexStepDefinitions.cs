@@ -4,6 +4,7 @@ using System;
 using TechTalk.SpecFlow;
 using TestAutomation.Pages;
 using TestAutomation.TestData;
+using NUnit.Framework;
 
 namespace TestAutomation.StepDefinitions
 {
@@ -12,18 +13,19 @@ namespace TestAutomation.StepDefinitions
     {
 
         private IWebDriver _driver;
-        private LoginPage _loginPage;
+        private ForexPage _forexPage;
         private LandingPage _landingPage;
         private WebDriverWait _wait;
 
-        LandingPageTestData searchPageData = new TestData.LandingPageTestData();
+        LandingPageTestData landingeData = new LandingPageTestData();
+        ForexTestData forexData = new ForexTestData(); 
 
 
 
         public ForexStepDefinitions(IWebDriver driver)
         {
             this._driver = driver;
-            this._loginPage = new LoginPage(driver);
+            this._forexPage = new ForexPage(driver);
             this._landingPage = new Pages.LandingPage(driver);
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(100));
         }
@@ -38,19 +40,21 @@ namespace TestAutomation.StepDefinitions
         public void GivenTheCookiesAreAccepted()
         {
             _landingPage.CheckCoockiesAppearAndClickConfirm(_driver);
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
         }
 
         [When(@"I click on the Trade Nations logo")]
         public void WhenIClickOnTheTradeNationsLogo()
         {
-            throw new PendingStepException();
+            _forexPage.FindLogo(_driver).Click();
+            Thread.Sleep(5000);
         }
 
         [Then(@"I should see the Title")]
         public void ThenIShouldSeeTheTitle()
         {
-            throw new PendingStepException();
+            string pageTitle = _landingPage.GetPageTitle(_driver);
+            Assert.AreEqual(forexData.forexpageTitle, pageTitle);
         }
     }
 }

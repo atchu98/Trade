@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestAutomation.TestData;
 
 namespace TestAutomation.Pages
 {
@@ -15,6 +16,13 @@ namespace TestAutomation.Pages
         {
             this._driver = driver;
         }
+
+        ForexTestData forexData = new ForexTestData();
+        public IWebElement FindLogo(IWebDriver driver)
+        {
+            return driver.FindElement(By.ClassName(forexData.tradenationLogo));
+        }
+        
 
         
     }
