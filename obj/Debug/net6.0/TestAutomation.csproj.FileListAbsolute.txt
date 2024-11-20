@@ -483,11 +483,6 @@ F:\Projects - C#\TestAutomation\TestAutomation\obj\Debug\net6.0\refint\TestAutom
 F:\Projects - C#\TestAutomation\TestAutomation\obj\Debug\net6.0\TestAutomation.pdb
 F:\Projects - C#\TestAutomation\TestAutomation\obj\Debug\net6.0\TestAutomation.genruntimeconfig.cache
 F:\Projects - C#\TestAutomation\TestAutomation\obj\Debug\net6.0\ref\TestAutomation.dll
-D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.csproj.AssemblyReference.cache
-D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.AssemblyInfoInputs.cache
-D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.AssemblyInfo.cs
-D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.csproj.CoreCompileInputs.cache
 D:\Projects - C#\New folder\Trade\bin\Debug\net6.0\LivingDoc.Dtos.dll
 D:\Projects - C#\New folder\Trade\bin\Debug\net6.0\LivingDoc.SpecFlowPlugin.dll
 D:\Projects - C#\New folder\Trade\bin\Debug\net6.0\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
@@ -663,6 +658,11 @@ D:\Projects - C#\New folder\Trade\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudi
 D:\Projects - C#\New folder\Trade\bin\Debug\net6.0\runtimes\win-x64\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
 D:\Projects - C#\New folder\Trade\bin\Debug\net6.0\runtimes\win-x86\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
 D:\Projects - C#\New folder\Trade\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.csproj.AssemblyReference.cache
+D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.AssemblyInfoInputs.cache
+D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.AssemblyInfo.cs
+D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.csproj.CoreCompileInputs.cache
 D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.csproj.CopyComplete
 D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\TestAutomation.dll
 D:\Projects - C#\New folder\Trade\obj\Debug\net6.0\refint\TestAutomation.dll
