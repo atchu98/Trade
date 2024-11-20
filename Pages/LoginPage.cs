@@ -41,7 +41,7 @@ namespace TestAutomation.Pages
 
         public IList<IWebElement> FindPaswwordError(IWebDriver driver)
         {
-            IList<IWebElement> errorMessages = driver.FindElements(By.CssSelector("p.MuiFormHelperText-root.Mui-error"));
+            IList<IWebElement> errorMessages = driver.FindElements(By.CssSelector("p.MuiFormHelperText-root.Mui-error.MuiFormHelperText-sizeMedium.MuiFormHelperText-contained.css-sbpyf7"));
 
             // Check if any error messages were found
             if (errorMessages.Count > 0)
