@@ -37,7 +37,8 @@ namespace TestAutomation.StepDefinitions
         [Given(@"The cookies are accepted")]
         public void GivenTheCookiesAreAccepted()
         {
-            throw new PendingStepException();
+            _landingPage.CheckCoockiesAppearAndClickConfirm(_driver);
+            Thread.Sleep(1000);
         }
 
         [When(@"I click on the Trade Nations logo")]

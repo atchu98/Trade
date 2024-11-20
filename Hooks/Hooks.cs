@@ -85,10 +85,9 @@ namespace TestAutomation.Hooks
  
             EdgeOptions edgeOptions = new EdgeOptions();
             edgeOptions.AddArgument("--disable-gpu");
-            edgeOptions.AddArgument("--window-size=1280,1800");
+            edgeOptions.AddArgument("--window-size=1280,800");
             IWebDriver driver = new EdgeDriver(edgeOptions);
 
-            //driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
 
